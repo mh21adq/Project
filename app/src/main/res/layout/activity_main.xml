@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
+    android:textSize="24sp"
+    android:layout_centerInParent="true"
     android:background="@drawable/img">
     <TextView
         android:id="@+id/textViewGreeting"
@@ -77,14 +79,15 @@
 
 
 
-        <TextView
+        <Button
             android:id="@+id/textViewForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot password?"
+            android:background="?attr/selectableItemBackground"
             android:textStyle="bold"
             android:textColor="#F44336"
-        android:padding="8dp" />
+            android:padding="8dp" />
     </LinearLayout>
 
 </RelativeLayout>

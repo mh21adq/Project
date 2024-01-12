@@ -1,19 +1,20 @@
 package com.example.myapplication;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import android.widget.Spinner;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.view.View;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
+import android.widget.*;
+import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity {
 
-    private Spinner spinnerLanguage;
-    private Button buttonLogout;
+    private Button buttonLogout,buttonLearn;
     private FirebaseAuth firebaseAuth;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,22 +23,30 @@ public class HomePage extends AppCompatActivity {
         // Initialize Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Set up the language spinner
-        spinnerLanguage = findViewById(R.id.spinnerLanguage);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.languages_array, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerLanguage.setAdapter(adapter);
-
-        // Set up the logout button
+        // Set up the Logout button
         buttonLogout = findViewById(R.id.buttonLogout);
+        buttonLearn=findViewById(R.id.buttonStartLearning);
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Sign the user out
                 firebaseAuth.signOut();
-                // Redirect to login page or another activity after logout
-                finish();
+
+                // Redirect to MainActivity
+                Intent intent = new Intent(HomePage.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // Finish the current activity
             }
         });
+        buttonLearn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showToast("Hi");
+            }
+        });
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

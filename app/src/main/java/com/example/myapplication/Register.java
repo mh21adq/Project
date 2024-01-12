@@ -63,15 +63,20 @@ public class Register extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(Register.this, "Registration successful", Toast.LENGTH_SHORT).show();
-                                    Log.d("RegisterActivity", "User registered successfully");
+                                    // Send email verification
+                                    firebaseAuth.getCurrentUser().sendEmailVerification()
+                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                @Override
+                                                public void onComplete(@NonNull Task<Void> task) {
+                                                    if (task.isSuccessful()) {
+                                                        Toast.makeText(Register.this, "Registration successful. Verification email sent.", Toast.LENGTH_SHORT).show();
+                                                        Log.d("RegisterActivity", "Verification email sent.");
 
-                                    // Redirect to HomePage after successful registration
-                                    Intent intent = new Intent(Register.this, HomePage.class);
-                                    startActivity(intent);
-
-                                    // Optionally, you might want to finish the current activity
-                                    finish();
+                                                    } else {
+                                                        Toast.makeText(Register.this, "Failed to send verification email.", Toast.LENGTH_SHORT).show();
+                                                    }
+                                                }
+                                            });
                                 } else {
                                     Toast.makeText(Register.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                 }

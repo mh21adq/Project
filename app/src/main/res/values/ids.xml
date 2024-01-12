@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="buttonLogout" type="id" />
+    <item name="buttonStartLearning" type="id" />
+    <item name="spinnerLanguage" type="id" />
+</resources>

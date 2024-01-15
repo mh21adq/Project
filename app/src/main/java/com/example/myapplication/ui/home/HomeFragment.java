@@ -4,34 +4,35 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import com.example.myapplication.R;
 
-import com.example.myapplication.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private ListView listView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        // Inflate the layout for this fragment
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
+        // Initialize the ListView
+        listView = root.findViewById(R.id.listView);
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        // Get the ViewModel
+        HomeViewModel homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+
+        // Observe the options list from the ViewModel and update the ListView
+        homeViewModel.getOptions().observe(getViewLifecycleOwner(), options -> {
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, options);
+            listView.setAdapter(adapter);
+        });
+
         return root;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
     }
 }

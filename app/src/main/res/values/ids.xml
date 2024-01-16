@@ -3,4 +3,10 @@
     <item name="buttonLogout" type="id" />
     <item name="buttonStartLearning" type="id" />
     <item name="spinnerLanguage" type="id" />
+    <item name="nav_host_fragment" type="id" />
+    <item name="fragment_container" type="id" />
+    <item name="runCodeButton" type="id" />
+    <item name="resultText" type="id" />
+    <item name="codeEditor" type="id" />
+    <item name="problemDescription" type="id" />
 </resources>

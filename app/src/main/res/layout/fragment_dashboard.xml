@@ -9,59 +9,14 @@
         android:id="@+id/problemDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Problem Description"
+        android:text="Java Compiler"
         android:textColor="#9C27B0"
-        android:textSize="18sp" />
-
-    <!-- Code Editor -->
-    <EditText
-        android:id="@+id/codeEditor"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fontFamily="monospace"
-        android:gravity="start|top"
-        android:hint="Write your code here"
-        android:inputType="textMultiLine"
-        android:background="#ffffff"
-        android:padding="16dp"
-        android:textSize="16sp" />
-
-    <!-- Run Code Button -->
-    <Button
-        android:id="@+id/runCodeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Run Code"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Output TextView wrapped in a ScrollView for scrolling -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="16dp">
-
-        <TextView
-            android:id="@+id/outputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:fontFamily="monospace"
-            android:background="#e0e0e0"
-        android:padding="16dp"
-        android:textColor="#ff0000"
-        android:text="Output will be shown here."/>
-    </ScrollView>
-
-    <!-- Result Text -->
-    <TextView
-        android:id="@+id/resultText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:layout_gravity="center_horizontal"/>
 
+    <!-- WebView for Online Java Compiler -->
+    <WebView
+        android:id="@+id/javaCompilerWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

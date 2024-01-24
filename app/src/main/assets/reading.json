@@ -1,0 +1,402 @@
+[
+  {
+    "buttonId": "btnJavaIntro",
+    "title": "Java Introduction",
+    "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It was developed by Sun Microsystems, which is now part of Oracle Corporation, and released in 1995. Java's syntax is similar to C and C++, but it has fewer low-level facilities than either of them.\n\nJava applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. This bytecode is the same across all platforms, which helps Java achieve one of its main goals: write once, run anywhere (WORA). This makes Java highly portable and versatile.\n\nJava is a statically typed language, which means that all variables must first be declared before they can be used. This helps to catch errors at an early stage of development. Java is also known for its strong memory management, which is managed through the use of a garbage collector that reclaims memory used by objects that are no longer needed.\n\nJava is widely used in various computing platforms from embedded devices and mobile phones to enterprise servers and supercomputers. It is the core foundation for developing Android apps, making it a very popular choice for mobile developers. Java is also used in web applications, desktop applications, scientific applications, and many other computing technologies.\n\nSome key features of Java include its portability across different platforms, its robustness with strong memory management, and its high performance, which can be optimized with the use of just-in-time compilers. Java also has a large and vibrant community, which contributes to a vast ecosystem of libraries and frameworks, making it easier for developers to create and maintain Java applications."
+
+  },
+  {
+    "buttonId": "btnJavaSyntax",
+    "title": "Java Syntax",
+    "description": "Java syntax refers to the set of rules that define how a Java program is written and interpreted. Influenced by its predecessors like C++, Java syntax is designed to be readable and straightforward, making it easier for programmers to learn and understand.\n\nIn Java, a program is made up of classes and methods. A class in Java can be thought of as a blueprint for creating objects (instances of the class). Each Java program must have at least one class, and the execution begins from the 'main' method. Here's a simple example:\n\n```java\npublic class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println('Hello, World!');\n    }\n}\n```\n\nIn this example, 'HelloWorld' is a class, and 'main' is a method inside that class. The `System.out.println` statement is used for output and prints text to the console.\n\nJava is strongly and statically typed, meaning that each variable's type is determined at compile time and cannot change. For example, an integer variable is declared as:\n\n```java\nint number = 5;\n```\n\nJava also uses objects and classes extensively. Object-oriented programming in Java allows for concepts such as inheritance, encapsulation, and polymorphism, which make it powerful for building complex applications.\n\nOther important aspects of Java syntax include:\n- Use of semicolons (`;`) to end statements.\n- Curly braces (`{ }`) to define a block of code.\n- Java is case-sensitive, which means that identifiers like 'Hello' and 'hello' are different.\n\nUnderstanding Java syntax is the foundation of being able to write and understand Java programs, making it a crucial skill for Java developers."
+
+  }
+  ,
+  {
+    "buttonId": "btnJavaOutput",
+    "title": "Java Output",
+    "description": "Java output refers to the way Java programs display information to the user. The most common method for outputting data in Java is through the `System.out` object, which provides access to the standard output stream (typically the console).\n\nOne of the most frequently used methods of `System.out` is `println()`, which prints the specified message to the console and then moves the cursor to a new line. For example:\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println('Hello, World!');\n        int number = 123;\n        System.out.println('Number: ' + number);\n    }\n}\n```\n\nIn this code snippet, `System.out.println` is used to output 'Hello, World!' and the value of the variable `number` to the console. The `+` operator in `'Number: ' + number` concatenates the string with the value of `number`, resulting in a single string that is passed to `println()`.\n\nJava also provides other methods like `print()` and `printf()` for different output requirements. `print()` is similar to `println()` but does not move the cursor to a new line after outputting the message. On the other hand, `printf()` allows formatted output, similar to the C-style `printf` function.\n\nUnderstanding how to use these output methods is essential for communicating information to the user, whether it's for debugging purposes or part of the program's functionality. Output operations in Java are not just limited to the console; they can also be directed to other destinations like files, network sockets, or graphical user interfaces, depending on the requirements of the program."
+
+  },
+  {
+    "buttonId": "btnJavaComments",
+    "title": "Java Comments",
+    "description": "In Java, comments are annotations in the code that are completely ignored by the Java compiler. They are used to explain the code, making it more readable and understandable to humans. Comments can provide context or explain the purpose of certain parts of your program, which is especially helpful in complex codebases.\n\nThere are two main types of comments in Java:\n\n1. Single-line Comments: As the name suggests, these comments span a single line. They start with two forward slashes (`//`). Anything following `//` on that line is considered a comment. For example:\n\n```java\n// This is a single-line comment\nint number = 5;  // This comment is after code\n```\n\n2. Multi-line Comments: These comments can span multiple lines and start with `/*` and end with `*/`. Everything between these two markers is considered a comment. For example:\n\n```java\n/* This is a multi-line comment\n   that spans multiple lines. */\nint number = 10;\n```\n\nJava also supports documentation comments (JavaDoc), which start with `/**` and end with `*/`. These are used to generate external documentation for your code.\n\nComments are crucial for maintaining code quality, especially in team environments. They help others understand the intent and functionality of the code, facilitating collaboration and future maintenance."
+
+  },
+  {
+    "buttonId": "btnJavaVariables",
+    "title": "Java Variables",
+    "description": "In Java, a variable is a container that holds data that can be changed during the execution of a program. Each variable in Java has a specific type, which determines the size and layout of the variable's memory; the range of values that can be stored within that memory; and the set of operations that can be applied to the variable.\n\nThere are several types of variables in Java:\n\n1. **Local Variables**: A variable defined within a block or method. It is created when the block is entered, and destroyed after exiting the block. Example:\n   ```java\n   void myMethod() {\n       int localVariable = 5; // Local variable\n   }\n   ```\n\n2. **Instance Variables (Non-static Fields)**: These are variables within a class but outside any method. Each instance (object) of the class has its own copy of these variables. Example:\n   ```java\n   public class MyClass {\n       int instanceVariable; // Instance variable\n   }\n   ```\n\n3. **Class Variables (Static Fields)**: These are variables declared with the `static` modifier within a class, but outside any method. There is only one copy of this variable shared by all instances of the class. Example:\n   ```java\n   public class MyClass {\n       static int classVariable; // Class variable\n   }\n   ```\n\nIn addition to these, Java has different data types for variables, such as:\n- **Primitive Types**: Include `int`, `float`, `double`, `boolean`, `char`, `byte`, `short`, and `long`. These hold the fundamental values like numbers, characters, and booleans. Example:\n   ```java\n   int number = 10; // A primitive type variable\n   ```\n\n- **Reference/Object Types**: These refer to objects and arrays. Unlike primitive types, reference types hold references (addresses) to the objects. Example:\n   ```java\n   String myString = 'Hello'; // A reference type variable\n   ```\n\nUnderstanding different types of variables and their scopes is essential in Java programming, as it affects how values are stored and accessed throughout your program."
+
+  },
+  {
+    "buttonId": "btnJavaDataTypes",
+    "title": "Java Data Types",
+    "description": "In Java, data types specify the size and type of values that can be stored in variables. Java has two categories of data types: Primitive Types and Reference Types.\n\n1. **Primitive Types**: These are the basic types of data:\n   - `byte`: The `byte` data type is an 8-bit signed two's complement integer. It has a minimum value of -128 and a maximum value of 127 (inclusive). Example: `byte a = 100;`\n   - `short`: The `short` data type is a 16-bit signed two's complement integer. It has a minimum value of -32,768 and a maximum value of 32,767 (inclusive). Example: `short b = 10000;`\n   - `int`: The `int` data type is a 32-bit signed two's complement integer, which has a minimum value of -2^31 and a maximum value of 2^31-1. Example: `int c = 100000;`\n   - `long`: The `long` data type is a 64-bit two's complement integer. It has a minimum value of -2^63 and a maximum value of 2^63-1. Example: `long d = 100000L;`\n   - `float`: The `float` data type is a single-precision 32-bit IEEE 754 floating point. Example: `float e = 234.5f;`\n   - `double`: The `double` data type is a double-precision 64-bit IEEE 754 floating point. Example: `double f = 123.4;`\n   - `boolean`: The `boolean` data type represents one bit of information, but its \"size\" isn't precisely defined. Example: `boolean g = true;`\n   - `char`: The `char` data type is a single 16-bit Unicode character. It has a minimum value of '\\u0000' (or 0) and a maximum value of '\\uffff' (or 65,535 inclusive). Example: `char h = 'A';`\n\n2. **Reference Types**: Reference types are any instantiable class as well as arrays. Variables of reference type can be used to refer to objects. The default value of any reference variable is `null`. Examples of reference types are:\n   - Objects of a class (e.g., `String`, `Integer`, `Object`)\n   - Arrays (e.g., `int[]`, `double[]`, `String[]`)\n\nExample of a reference type:\n   ```java\n   String myString = \"Hello, World!\";\n   int[] myIntArray = new int[10];\n   ```\n\nUnderstanding these data types is crucial in Java programming, as they define the type and nature of the data that can be stored and manipulated within your programs."
+
+  },
+  {
+    "buttonId": "btnJavaTypeCasting",
+    "title": "Java Type Casting",
+    "description": "In Java, type casting is the process of converting a value from one data type to another. This is essential when you want to perform operations involving values of different data types. There are two types of type casting in Java:\n\n1. **Implicit Casting (Widening Conversion)**: This occurs automatically when the source type has a smaller range than the target type. For example, converting an `int` to a `long` or a `float` to a `double`. No data loss occurs during widening conversion. Example:\n   ```java\n   int myInt = 9;\n   double myDouble = myInt; // Implicit casting\n   ```\n   Here, `myInt` is automatically converted to `double`.\n\n2. **Explicit Casting (Narrowing Conversion)**: This must be done manually by placing the type in parentheses in front of the value. It's necessary when you're assigning a larger range data type to a variable with a smaller range data type, like converting a `double` to an `int`. This might lead to data loss. Example:\n   ```java\n   double myDouble = 9.78;\n   int myInt = (int) myDouble; // Explicit casting\n   ```\n   Here, `myDouble` is explicitly cast to an `int`, and its decimal part is lost.\n\nUnderstanding type casting is important for avoiding type mismatch errors and ensuring that operations on variables produce expected results. It's especially crucial when dealing with numeric types where precision and range might vary between different types."
+
+  },
+  {
+    "buttonId": "btnJavaOperators",
+    "title": "Java Operators",
+    "description": "In Java, operators are special symbols that perform operations on variables and values. Java operators are used to perform operations such as arithmetic, logic, and comparison. They are categorized into several types:\n\n1. **Arithmetic Operators**: Used for performing basic arithmetic operations. For example:\n   - Addition (`+`): `int sum = 10 + 5;`\n   - Subtraction (`-`): `int diff = 10 - 5;`\n   - Multiplication (`*`): `int product = 10 * 5;`\n   - Division (`/`): `int quotient = 10 / 5;`\n   - Modulus (`%`): `int remainder = 10 % 5;`\n\n2. **Unary Operators**: Operate on a single operand. For example:\n   - Increment (`++`): `int a = 10; a++; // Now a is 11`\n   - Decrement (`--`): `int b = 10; b--; // Now b is 9`\n   - Logical complement (`!`): `boolean flag = false; flag = !flag; // Now flag is true`\n\n3. **Relational Operators**: Used for comparing two values. For example:\n   - Equal to (`==`)\n   - Not Equal to (`!=`)\n   - Greater than (`>`)\n   - Less than (`<`)\n   - Greater than or equal to (`>=`)\n   - Less than or equal to (`<=`)\n\n4. **Logical Operators**: Used for boolean logic. For example:\n   - Logical AND (`&&`)\n   - Logical OR (`||`)\n\n5. **Assignment Operators**: Used to assign values to variables. For example:\n   - Assignment (`=`)\n   - Add and assign (`+=`)\n   - Subtract and assign (`-=`)\n\n6. **Bitwise Operators**: Operate on bits and perform bit-by-bit operations. For example:\n   - Bitwise AND (`&`)\n   - Bitwise OR (`|`)\n\n7. **Ternary Operator**: Short form of if-else, which is used to evaluate boolean expressions. For example:\n   - `int result = (someCondition) ? value1 : value2;`\n\nOperators are fundamental to any Java program, as they allow you to manipulate data, compare values, and perform various calculations. Proper understanding and use of these operators enable more efficient and effective coding in Java."
+
+  },
+  {
+    "buttonId": "btnJavaStrings",
+    "title": "Java Strings",
+    "description": "In Java, strings are objects that represent sequences of characters. The Java platform provides the `String` class to create and manipulate strings. Unlike some other languages where strings are arrays of characters, in Java, a string is an object of the `String` class.\n\n**Creating Strings**:\nStrings can be created in multiple ways. The most direct way is to use a string literal, as shown below:\n```java\nString greeting = 'Hello, World!';\n```\nHere, `greeting` is a string object that holds the text `Hello, World!`.\n\n**Immutability of Strings**:\nOne of the key characteristics of string objects in Java is that they are immutable. Once a string object is created, its value cannot be changed. If it seems like a string is being modified, what is actually happening is a new string object is being created.\n\n**String Concatenation**:\nStrings can be concatenated (joined) using the `+` operator:\n```java\nString firstName = 'John';\nString lastName = 'Doe';\nString fullName = firstName + ' ' + lastName;\n```\n\n**String Methods**:\nJava provides many methods for string manipulation, such as:\n- `length()`: Returns the length of the string.\n- `charAt(int index)`: Returns the character at the specified index.\n- `substring(int beginIndex, int endIndex)`: Returns a substring.\n- `indexOf(String str)`: Returns the index of the specified string.\n- `toLowerCase()`, `toUpperCase()`: Converts the string to lower or upper case.\n\n**Comparing Strings**:\nStrings can be compared using the `equals()` and `equalsIgnoreCase()` methods. It's important to use these methods rather than the `==` operator, as `==` compares object references, not the content of the strings.\n\n**Example of String Comparison**:\n```java\nString str1 = 'Hello';\nString str2 = 'Hello';\nString str3 = new String('Hello');\n\nboolean result1 = (str1 == str2); // true, because they refer to the same object\nboolean result2 = (str1 == str3); // false, because they are different objects\nboolean result3 = str1.equals(str3); // true, because the content is the same\n```\n\nUnderstanding strings and their methods is crucial in Java, as they are one of the most commonly used types for storing and manipulating text data."
+
+  },
+  {
+    "buttonId": "btnJavaMath",
+    "title": "Java Math",
+    "description": "Java provides a powerful class called `Math` in the `java.lang` package, which contains methods for performing basic numeric operations such as the elementary exponential, logarithm, square root, and trigonometric functions. Being a static class, `Math` does not need to be instantiated, and its methods can be accessed directly.\n\nSome of the key methods in the `Math` class include:\n\n1. **Basic Arithmetic Operations**:\n   - `Math.addExact(int x, int y)`: Adds two integers, throwing an exception on overflow.\n   - `Math.subtractExact(int x, int y)`: Subtracts one integer from another, throwing an exception on overflow.\n   - `Math.multiplyExact(int x, int y)`: Multiplies two integers, throwing an exception on overflow.\n\n2. **Exponents and Roots**:\n   - `Math.pow(double a, double b)`: Returns the value of the first parameter raised to the power of the second parameter. Example: `Math.pow(2, 3)` returns 8.0.\n   - `Math.sqrt(double a)`: Returns the correctly rounded positive square root of a double value. Example: `Math.sqrt(16)` returns 4.0.\n\n3. **Trigonometric Functions**:\n   - `Math.sin(double a)`: Returns the sine of an angle (in radians). Example: `Math.sin(Math.PI/2)` returns 1.0.\n   - `Math.cos(double a)`: Returns the cosine of an angle (in radians).\n   - `Math.tan(double a)`: Returns the tangent of an angle (in radians).\n\n4. **Logarithms**:\n   - `Math.log(double a)`: Returns the natural logarithm (base e) of a double value.\n   - `Math.log10(double a)`: Returns the base 10 logarithm of a double value.\n\n5. **Rounding Functions**:\n   - `Math.ceil(double a)`: Returns the smallest (closest to negative infinity) double value that is greater than or equal to the argument and is equal to a mathematical integer.\n   - `Math.floor(double a)`: Returns the largest (closest to positive infinity) double value that is less than or equal to the argument and is equal to a mathematical integer.\n   - `Math.round(double a)`: Returns the closest long or int, as indicated by the method's return type, to the argument.\n\n6. **Random Number Generation**:\n   - `Math.random()`: Returns a double value greater than or equal to 0.0 and less than 1.0.\n\nThe `Math` class is essential for mathematical operations in Java, particularly when dealing with precise calculations, scientific computing, or tasks that require mathematical functions."
+  },
+  {
+    "buttonId": "btnJavaBooleans",
+    "title": "Java Booleans",
+    "description": "In Java, the boolean data type is used to store only two possible values: `true` or `false`. This type is primarily used for conditional testing, which is a core concept in programming. Boolean expressions are a foundational aspect of control flow statements such as if-else conditions, loops, and switch cases.\n\n**Declaration and Initialization**:\nBooleans are declared and initialized as follows:\n```java\nboolean isJavaFun = true;\nboolean isFishTasty = false;\n```\nIn these examples, `isJavaFun` is a boolean variable set to `true`, while `isFishTasty` is set to `false`.\n\n**Boolean Expressions**:\nBoolean expressions are used to make decisions in the code. For instance, in an if-else statement:\n```java\nif (isJavaFun) {\n    System.out.println('Java is fun!');\n} else {\n    System.out.println('I don't think Java is fun.');\n}\n```\n\n**Logical Operators**:\nLogical operators like AND (`&&`), OR (`||`), and NOT (`!`) are often used with boolean variables to form complex conditional expressions. For example:\n```java\nboolean isAdult = true;\nboolean isStudent = false;\nif (isAdult && !isStudent) {\n    System.out.println('Adult and not a student.');\n}\n```\n\n**Boolean in Loops**:\nBooleans are also commonly used in controlling loop conditions:\n```java\nboolean shouldContinue = true;\nwhile (shouldContinue) {\n    // code\n    if (someCondition) {\n        shouldContinue = false;\n    }\n}\n```\n\nUnderstanding the boolean data type and how to use boolean expressions effectively is crucial in Java. Booleans enable programmers to control the flow of their code based on conditions, making them a fundamental aspect of programming logic and decision-making."
+
+  },
+  {
+    "buttonId": "btnJavaIf...Else",
+    "title": "Java If...Else",
+    "description": "In Java, `if...else` statements are used to execute different blocks of code based on certain conditions. These are fundamental to controlling the flow of a program. The `if` statement tests the condition inside parentheses. If the condition evaluates to `true`, the block of code inside the `if` statement is executed. If the condition is `false`, the flow of control jumps to the `else` block, if one is provided.\n\n**Basic `if` statement**:\n```java\nint number = 10;\nif (number > 0) {\n    System.out.println('Number is positive.');\n}\n```\nThis code checks if `number` is greater than 0 and prints a message if true.\n\n**`if...else` statement**:\nAn `else` block can be added to execute code when the `if` condition is false:\n```java\nif (number > 0) {\n    System.out.println('Number is positive.');\n} else {\n    System.out.println('Number is not positive.');\n}\n```\n\n**`if...else if...else` statement**:\nMultiple conditions can be tested in sequence:\n```java\nif (number > 0) {\n    System.out.println('Number is positive.');\n} else if (number < 0) {\n    System.out.println('Number is negative.');\n} else {\n    System.out.println('Number is zero.');\n}\n```\n\n**Nested `if` statements**:\n`if` statements can be nested within each other:\n```java\nif (number > 0) {\n    if (number % 2 == 0) {\n        System.out.println('Number is positive and even.');\n    }\n}\n```\n\n`if...else` statements are a powerful tool for decision-making in programming. They allow the execution of different code paths based on conditions, thereby adding logic and flow control to Java applications."
+
+  },
+  {
+    "buttonId": "btnJavaSwitch",
+    "title": "Java Switch",
+    "description": "In Java, the `switch` statement provides an efficient way to execute different parts of code based on the value of an expression. It is a more readable alternative to a long series of `if...else if` statements. The `switch` works with the `byte`, `short`, `char`, and `int` primitive data types, enumerated types (enums), the `String` class, and a few special classes that wrap certain primitive types such as `Byte`, `Short`, `Integer`, and `Character`.\n\n**Basic Structure**:\nA `switch` statement works by evaluating an expression and then executing different code blocks based on the result. Here’s a basic example:\n```java\nint day = 4;\nswitch (day) {\n    case 1:\n        System.out.println('Monday');\n        break;\n    case 2:\n        System.out.println('Tuesday');\n        break;\n    // ... other cases ...\n    default:\n        System.out.println('Day not recognized');\n}\n```\nIn this example, the `switch` statement evaluates the `day` variable. If `day` is 1, it prints 'Monday', if it's 2, it prints 'Tuesday', and so on. The `break` keyword exits the switch block. The `default` case is optional and can be used for handling unexpected values.\n\n**Enhanced `switch` Statement (Java 12 and later)**:\nJava 12 introduced an enhanced version of the `switch` statement, which allows for more concise syntax and the use of multiple labels for a single case:\n```java\nswitch (day) {\n    case 1, 2 -> System.out.println('Weekday');\n    case 3, 4, 5 -> System.out.println('Midweek');\n    default -> System.out.println('Weekend');\n}\n```\nThis enhanced `switch` statement uses arrow labels (`->`) and does not require the `break` keyword. Each case block is a lambda expression, making the code more concise and readable.\n\nThe `switch` statement is a powerful control structure in Java, especially useful in scenarios where a variable or expression can have multiple possible values, and different actions are required for each value."
+
+  }
+,
+  {
+    "buttonId": "btnJavaWhileLoop",
+    "title": "Java While Loop",
+    "description": "In Java, the `while` loop is a control flow statement that allows code to be executed repeatedly based on a given boolean condition. The `while` loop continues to execute the block of code as long as the specified condition remains `true`. It's a fundamental tool in Java for iterating over a block of code when the exact number of iterations is not known beforehand.\n\n**Basic Structure**:\nA `while` loop begins with the keyword `while` followed by a condition in parentheses. The code block inside the loop is executed repeatedly until the condition becomes `false`. Here’s an example:\n```java\nint count = 1;\nwhile (count <= 5) {\n    System.out.println('Count: ' + count);\n    count++;\n}\n```\nIn this example, the `while` loop prints the value of `count` and then increments it. The loop continues until `count` is greater than 5.\n\n**Infinite Loops**:\nIf the condition of a `while` loop never becomes false, the loop will continue indefinitely, resulting in an infinite loop. For example:\n```java\nwhile (true) {\n    // Code that never terminates\n}\n```\n\n**Key Points**:\n- The condition is evaluated before the execution of the loop's body. If the condition is `false` from the beginning, the loop's body does not execute even once.\n- Properly managing the loop condition and ensuring that it eventually becomes `false` is crucial to avoid infinite loops.\n- `while` loops are particularly useful when the number of iterations is not known beforehand, as opposed to `for` loops where the number of iterations is typically known.\n\nThe `while` loop is a versatile and widely used looping construct in Java, ideal for scenarios where you need to repeat a block of code until a certain condition is met."
+  }
+,
+  {
+    "buttonId": "btnJavaForLoop",
+    "title": "Java For Loop",
+    "description": "In Java, the `for` loop is used to execute a block of code a set number of times, which can be determined before the loop starts. It is one of the most commonly used loops in Java programming, especially when the exact number of iterations is known. The `for` loop is compact and includes initialization, condition check, and increment/decrement in a single line, making the code concise and clear.\n\n**Basic Structure**:\nA `for` loop typically includes three parts: initialization, condition, and increment/decrement expression, all separated by semicolons. Here's a basic example:\n```java\nfor (int i = 0; i < 5; i++) {\n    System.out.println('i = ' + i);\n}\n```\nIn this example, the loop starts with `i` initialized to 0. It runs as long as `i` is less than 5, and `i` is incremented by 1 in each iteration. The loop prints the value of `i` five times, from 0 to 4.\n\n**Enhanced For Loop**:\nJava also provides an enhanced for loop (also known as the \"for-each\" loop) which is used to iterate through elements in an array or a collection. It is less prone to errors and more readable. Example:\n```java\nint[] numbers = {1, 2, 3, 4, 5};\nfor (int number : numbers) {\n    System.out.println(number);\n}\n```\nHere, the loop iterates over each element in the `numbers` array and prints it.\n\n**Use Cases**:\n- Traditional `for` loops are ideal for iterating a predefined number of times, such as when indexing arrays or collections.\n- Enhanced for loops are better suited for iterating through arrays or collections where the number of elements is unknown or irrelevant.\n\nThe `for` loop is a powerful tool in Java for repetitive tasks. It offers precise control over how many times the loop should execute, making it especially useful for tasks like iterating over arrays, processing collections, or any scenario where the number of iterations is known beforehand."
+
+  }
+,
+  {
+    "buttonId": "btnJavaBreak/Continue",
+    "title": "Java Break/Continue",
+    "description": "In Java, 'break' and 'continue' are two control flow statements used within loops (`for`, `while`, and `do-while`) and switch statements.\n\n1. **The `break` Statement**: Used to exit a loop or a switch statement prematurely. When a `break` is encountered, the control is transferred out of the loop or switch statement, and the program continues with the next statement after the loop/switch.\n   Example:\n   ```java\n   for (int i = 0; i < 10; i++) {\n       if (i == 5) {\n           break; // Exits the loop when i is 5\n       }\n       System.out.println(i);\n   }\n   ```\n\n2. **The `continue` Statement**: Skips the current iteration of a loop and proceeds to the next iteration. It only skips to the end of the loop's current iteration.\n   Example:\n   ```java\n   for (int i = 0; i < 10; i++) {\n       if (i % 2 == 0) {\n           continue; // Skips the rest of the loop body for even numbers\n       }\n       System.out.println(i); // Prints only odd numbers\n   }\n   ```\n\nThese statements are useful for enhancing the control flow in loops and can help avoid deeply nested conditional code."
+
+  }
+,
+  {
+    "buttonId": "btnJava Arrays",
+    "title": "Java Arrays",
+    "description": "In Java, arrays are containers that hold a fixed number of values of a single type. They are used to store multiple items in a single variable, which makes it easier to manage large data sets.\n\n**Declaration and Initialization**:\n- Arrays are declared with the data type of elements they will hold, followed by square brackets `[]`.\n- They can be initialized either by specifying the size (number of elements) or by initializing them with a predefined list of elements.\n   Example:\n   ```java\n   int[] myArray = new int[5]; // An array of 5 integers\n   String[] fruits = {'Apple', 'Banana', 'Cherry'}; // An array of strings\n   ```\n\n**Accessing Array Elements**:\n- Elements are accessed by their index, starting from 0.\n   Example:\n   ```java\n   int firstNumber = myArray[0]; // Access the first element\n   myArray[1] = 5; // Assign a value to the second element\n   ```\n\n**Key Features**:\n- The size of an array is fixed once it is created.\n- Arrays can hold primitives or objects, but the elements must all be of the same type.\n\nArrays are fundamental in Java for storing and manipulating multiple data items efficiently, especially when working with large data sets or performing operations on each item."
+
+  }
+,
+  {
+    "buttonId": "btnJava Methods",
+    "title": "Java Methods",
+    "description": "In Java, methods are blocks of code that perform a specific task. They are used to execute particular actions and can return a value. Methods allow code reusability and improve program organization.\n\n**Declaration**:\n- A method is declared within a class. It has a name, return type, and may have parameters. The `void` keyword indicates that the method does not return any value.\n   Example:\n   ```java\n   public int addNumbers(int num1, int num2) {\n       return num1 + num2; // Method that returns the sum of two numbers\n   }\n   ```\n\n**Calling a Method**:\n- Methods are called by their name, and if they accept parameters, values for these parameters must be provided.\n   Example:\n   ```java\n   int result = addNumbers(5, 10); // Calling the method\n   ```\n\nMethods are essential in Java for breaking down complex problems into smaller, more manageable tasks, promoting code reuse and better readability."
+  }
+,
+  {
+    "buttonId": "btnJavaMethodParameters",
+    "title": "Java Method Parameters",
+    "description": "In Java, method parameters (or arguments) are the variables passed to a method when it is called. They allow methods to be more flexible and reusable by accepting different input values.\n\n**Types of Parameters**:\n1. **Formal Parameters**: These are the variables defined in the method declaration and used within the method.\n2. **Actual Parameters**: These are the values passed to the method when it is invoked.\n\n**Example**:\n```java\npublic void greet(String name) { // 'name' is a formal parameter\n    System.out.println('Hello, ' + name);\n}\n\n// Elsewhere in code\ngreet('Alice'); // 'Alice' is an actual parameter\n```\n\nIn this example, `name` is a formal parameter of the `greet` method, and `Alice` is the actual parameter used when calling the method. Method parameters are fundamental for making methods more dynamic and adaptable to different requirements."
+  }
+,
+  {
+    "buttonId": "btnJavaMethodOverloading",
+    "title": "Java Method Overloading",
+    "description": "Method overloading in Java is a feature that allows a class to have more than one method with the same name, as long as their parameter lists are different. It is a way of implementing polymorphism at compile time and increases the readability of the program.\n\n**Key Points**:\n- Overloaded methods must have a different argument list (either different number of parameters, different types of parameters, or both).\n- Overloaded methods can have different return types and access modifiers.\n\n**Example**:\n```java\npublic class ExampleClass {\n    public int add(int a, int b) {\n        return a + b;\n    }\n    public double add(double a, double b) {\n        return a + b;\n    }\n}\n```\nHere, the `add` method is overloaded with two versions: one that takes two integers and another that takes two doubles. The appropriate method is called based on the argument types used when calling `add`."
+  }
+,
+  {
+    "buttonId": "btnJavaScope",
+    "title": "Java Scope",
+    "description": "In Java, 'scope' refers to the region of the program where a variable is accessible. Java has several scopes:\n\n1. **Local Scope**: Variables declared inside a block `{}` are accessible only within that block.\n2. **Instance Scope**: Variables declared inside a class but outside any method are instance variables and are accessible to all methods in the class unless marked `private`.\n3. **Class Scope**: Variables declared as `static` are class variables and are accessible to all instances of the class.\n\n**Example**:\n```java\npublic class ScopeExample {\n    int instanceVar; // Instance scope\n    static int classVar; // Class scope\n\n    public void method() {\n        int localVar = 5; // Local scope\n        instanceVar = localVar;\n    }\n}\n```\nIn this example, `localVar` is only accessible within the `method`, `instanceVar` is accessible within any method of `ScopeExample`, and `classVar` is accessible globally within any instance of the `ScopeExample` class."
+  }
+,
+  {
+    "buttonId": "btnJavaRecursion",
+    "title": "Java Recursion",
+    "description": "Recursion in Java is the technique of making a function call itself. It is used to solve problems that can be broken down into smaller, repetitive tasks.\n\n**Key Points**:\n- Every recursive function must have a base case to avoid infinite recursion.\n- Recursive solutions can be simpler and more elegant than iterative ones for certain problems.\n\n**Example**:\n```java\npublic class RecursionExample {\n    public static int factorial(int n) {\n        if (n == 1) {\n            return 1; // Base case\n        } else {\n            return n * factorial(n - 1); // Recursive call\n        }\n    }\n}\n```\nIn this example, `factorial` method calls itself with a decremented value of `n` until it reaches the base case."
+  }
+,
+  {
+    "buttonId": "btnJavaClasses",
+    "title": "Java Classes",
+    "description": "Recursion in Java is the technique of making a function call itself. It is used to solve problems that can be broken down into smaller, repetitive tasks.\n\n**Key Points**:\n- Every recursive function must have a base case to avoid infinite recursion.\n- Recursive solutions can be simpler and more elegant than iterative ones for certain problems.\n\n**Example**:\n```java\npublic class RecursionExample {\n    public static int factorial(int n) {\n        if (n == 1) {\n            return 1; // Base case\n        } else {\n            return n * factorial(n - 1); // Recursive call\n        }\n    }\n}\n```\nIn this example, `factorial` method calls itself with a decremented value of `n` until it reaches the base case."
+  }
+,
+  {
+    "buttonId": "btnJavaOOP",
+    "title": "Java OOP",
+    "description": "Object-Oriented Programming (OOP) is a programming paradigm used in Java that is based on the concept of 'objects'. OOP models real-world entities as software objects that have some state (attributes) and behavior (methods).\n\n**Four Main Principles of OOP**:\n1. **Encapsulation**: Encapsulating the data (attributes) and the code (methods) together as a single unit.\n2. **Inheritance**: Inheriting properties and behaviors from existing classes to create new classes.\n3. **Polymorphism**: The ability of different classes to be treated as instances of the same class through inheritance.\n4. **Abstraction**: Hiding complex implementation details and showing only the necessary features of an object.\n\n**Example**:\n```java\npublic class Animal {\n    public void sound() {\n        System.out.println('Some sound');\n    }\n}\npublic class Dog extends Animal {\n    @Override\n    public void sound() {\n        System.out.println('Bark');\n    }\n}\n```\nIn this example, `Dog` inherits from `Animal`, demonstrating inheritance and polymorphism. The `sound` method in `Animal` is abstracted and overridden in `Dog`."
+ }
+,
+  {
+    "buttonId": "btnJavaClasses/Objects",
+    "title": "Java Classes/Objects",
+    "description": "In Java, a 'Class' is a blueprint for objects. It defines a data type by bundling data and methods that work on the data into one single unit. An 'Object' is an instance of a class created using the blueprint. It represents a real-world entity with state and behavior.\n\n**Creating a Class and Object**:\n- A class is created using the `class` keyword.\n- Objects are instantiated from a class using the `new` keyword.\n\n**Example**:\n```java\npublic class Car {\n    String brand; // Class attribute\n    public void honk() { // Class method\n        System.out.println('Beep!');\n    }\n}\n\n// Creating an object of Car\nCar myCar = new Car();\nmyCar.brand = 'Ford';\nmyCar.honk(); // Outputs: Beep!\n```\nIn this example, `Car` is a class with an attribute `brand` and a method `honk()`. `myCar` is an object of the `Car` class."
+ }
+,
+  {
+    "buttonId": "btnJavaClassAttributes",
+    "title": "Java Class Attributes",
+    "description": "Class Attributes in Java, also known as class variables or fields, are variables declared within a class. They represent the state of an object created from the class and are used to store data.\n\n**Types of Class Attributes**:\n- Instance Variables: Unique to each instance of a class.\n- Class Variables: Declared with the `static` keyword; shared among all instances of the class.\n\n**Example**:\n```java\npublic class Student {\n    String name; // Instance variable\n    static String school = 'XYZ High School'; // Class variable\n}\n```\nIn this example, `name` is an instance variable, and `school` is a class variable of the `Student` class. Each `Student` object will have its own `name`, but share the same `school`."
+ }
+,
+  {
+    "buttonId": "btnJavaClassMethods",
+    "title": "Java Class Methods",
+    "description": "In Java, class methods, also known simply as methods, are functions that are defined inside a class. They are used to define the behavior of an object and can manipulate the class's attributes or perform other actions.\n\n**Types of Class Methods**:\n- Instance Methods: Belong to an instance of a class and can manipulate instance variables.\n- Class Methods: Declared with the `static` keyword and belong to the class itself, not to any particular object.\n\n**Example**:\n```java\npublic class Calculator {\n    public static int add(int a, int b) { // Class method\n        return a + b;\n    }\n    public int subtract(int a, int b) { // Instance method\n        return a - b;\n    }\n}\n```\nIn this `Calculator` class, `add` is a class method, and `subtract` is an instance method."
+}
+,
+  {
+    "buttonId": "btnJavaConstructors",
+    "title": "Java Constructors",
+    "description": "In Java, a constructor is a special method used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes.\n\n**Key Points**:\n- Constructors have the same name as the class.\n- They do not have a return type, not even `void`.\n\n**Example**:\n```java\npublic class Book {\n    String title;\n\n    // Constructor\n    public Book(String name) {\n        title = name;\n    }\n}\n\n// Creating an object of Book\nBook myBook = new Book('Java for Beginners');\n```\nIn this example, `Book` has a constructor that initializes the `title` attribute. When creating `myBook`, the `Book` constructor is called to set the title of the book to 'Java for Beginners'."
+  }
+,
+  {
+    "buttonId": "btnJavaModifiers",
+    "title": "Java Modifiers",
+    "description": "In Java, modifiers are keywords used to define the access level and other properties of classes, methods, and variables. There are two categories of modifiers:\n\n1. **Access Modifiers**: Control the visibility of classes, methods, and variables. The primary access modifiers are:\n   - `public`: The member is accessible from any other class.\n   - `private`: The member is accessible only within its own class.\n   - `protected`: The member is accessible within its own package and by subclasses.\n   - No modifier (default): The member is accessible within its own package.\n\n2. **Non-Access Modifiers**: Provide other functionality. Some common non-access modifiers are:\n   - `static`: Belongs to the class, rather than instances of the class.\n   - `final`: The value can't be modified (for variables), or the method can't be overridden or the class can't be inherited.\n   - `abstract`: The class/method needs to be implemented or extended in a subclass.\n\n**Example**:\n```java\npublic class ModifierExample {\n    private int data; // Private variable\n    public void setData(int data) { // Public method\n        this.data = data;\n    }\n}\n```\nIn this `ModifierExample` class, the `data` variable is private, and `setData` is a public method."
+}
+,
+  {
+    "buttonId": "btnJavaEncapsulation",
+    "title": "Java Encapsulation",
+    "description": "Encapsulation in Java is one of the fundamental principles of Object-Oriented Programming. It refers to the bundling of data (variables) and methods that operate on the data into a single unit or class, and restricting the access to the details of the implementation.\n\n**Key Points**:\n- Encapsulation is achieved by making fields private and providing public getter and setter methods to modify and view the values.\n\n**Example**:\n```java\npublic class Person {\n    private String name; // Private field\n\n    // Getter\n    public String getName() {\n        return name;\n    }\n\n    // Setter\n    public void setName(String newName) {\n        this.name = newName;\n    }\n}\n```\nIn this `Person` class, the `name` field is encapsulated. It can only be accessed and modified through the `getName` and `setName` methods."
+}
+,
+  {
+    "buttonId": "btnJavaPackages/API",
+    "title": "Java Packages / API",
+    "description": "In Java, a package is a namespace that organizes a set of related classes and interfaces. Conceptually similar to a folder in a file system, packages are used to avoid name conflicts and to control access with the help of access modifiers.\n\n**API (Application Programming Interface)** refers to a set of pre-defined methods and classes that can be used for specific purposes in your application. Java's standard library, also known as Java API, offers a wide range of ready-to-use classes and interfaces.\n\n**Using Packages**:\n- Packages are declared at the beginning of a Java source file.\n- Standard Java API packages include `java.lang`, `java.util`, `java.io`, and many others.\n\n**Example**:\n```java\npackage com.example.myapp; // Package declaration\n\nimport java.util.ArrayList; // Import statement\n\npublic class MyClass {\n    ArrayList<String> list = new ArrayList<String>();\n}\n```\nIn this example, `MyClass` is part of the `com.example.myapp` package and uses `ArrayList` from the `java.util` package."
+ }
+,
+  {
+    "buttonId": "btnJavaInheritance",
+    "title": "Java Inheritance",
+    "description": "Inheritance in Java is a mechanism where a new class, known as a subclass, is derived from an existing class, known as a superclass. The subclass inherits all the members (fields, methods, etc.) from the superclass but can also have additional features or override the superclass methods.\n\n**Key Points**:\n- The `extends` keyword is used for inheritance.\n- Inheritance supports the concept of 'reusability', making the code more organized and manageable.\n\n**Example**:\n```java\npublic class Vehicle { // Superclass\n    public void display() {\n        System.out.println('I am a Vehicle');\n    }\n}\n\npublic class Car extends Vehicle { // Subclass\n    @Override\n    public void display() {\n        System.out.println('I am a Car');\n    }\n}\n```\nIn this example, `Car` extends `Vehicle`. `Car` inherits `display` from `Vehicle` but also provides its own implementation."
+}
+  ,
+  {
+    "buttonId": "btnJavaPolymorphism",
+    "title": "Java Polymorphism",
+    "description": "Polymorphism in Java is a concept by which we can perform a single action in different ways. It allows methods to do different things based on the object that it is acting upon. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method overriding). Compile-time polymorphism is achieved by function overloading whereas Runtime polymorphism is achieved by function overriding. Example: In method overloading, a class can have multiple methods with the same name but different parameters. In method overriding, a subclass can provide a specific implementation of a method already present in its superclass."
+  }
+,
+  {
+    "buttonId": "btnJavaInnerClasses",
+    "title": "Java Inner Classes",
+    "description": "Java Inner Classes or nested classes are a way of logically grouping classes that are only used in one place. They can access all the members of the outer class, including private data members and methods. Types of inner classes include non-static nested classes, static nested classes, local classes (classes defined within a block), and anonymous classes. Example: 'class OuterClass { class InnerClass { /* ... */ } }'. Here, 'InnerClass' can access all members of 'OuterClass'."
+  }
+,
+  {
+    "buttonId": "btnJavaAbstraction",
+    "title": "Java Abstraction",
+    "description": "Abstraction in Java is the concept of hiding the complex reality while only showing the necessary parts. It can be achieved with either abstract classes or interfaces. An abstract class can contain abstract methods (without a body) and concrete methods (with a body). Abstract classes are used to provide a base for subclasses to extend and implement the abstract methods. Example: 'abstract class Animal { abstract void makeSound(); } class Dog extends Animal { void makeSound() { System.out.println(\"Bark\"); } }'. Here, 'Dog' provides the implementation of 'makeSound'."
+  }
+,
+  {
+    "buttonId": "btnJavaInterface",
+    "title": "Java Interface",
+    "description": "An Interface in Java is a template that can be used to implement a class. It is similar to a class but with static constants and abstract methods only. Interfaces are used to achieve abstraction and multiple inheritance in Java. They allow us to separate what a class does from how it does it. Example: 'interface Animal { void makeSound(); } class Cat implements Animal { public void makeSound() { System.out.println(\"Meow\"); } }'. Here, the 'Cat' class implements the 'Animal' interface, providing its own implementation of 'makeSound'."
+  }
+,
+  {
+    "buttonId": "btnJavaEnums",
+    "title": "Java Enums",
+    "description": "Enums (short for Enumerations) in Java are special data types used to define collections of constants. More powerful than simple constants, they provide a means of defining a set of related values with type safety. Enums can have fields, methods, and constructors like other classes but are more readable and safer. Example: 'enum Day { MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY }'. Each of these constants is an object of the 'Day' enum."
+  }
+,{
+  "buttonId": "btnJavaUserInput",
+  "title": "Java User Input",
+  "description": "In Java, user input can be read using various methods, with the `Scanner` class being one of the most commonly used for console input. The `Scanner` class in the `java.util` package allows reading parsed tokens of the primitive types and strings. It works with `InputStream` and can be used to read data from various sources like user input, files, etc.\n\nExample:\n```java\nimport java.util.Scanner;\npublic class UserInputExample {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        System.out.print('Enter your name: ');\n        String name = scanner.nextLine();\n        System.out.println('Hello, ' + name);\n        scanner.close();\n    }\n}\n```\nThis code snippet creates a `Scanner` instance to read user input from the console, prompting the user to enter their name and then greeting them."
+}
+,{
+  "buttonId": "btnJavaDate",
+  "title": "Java Date",
+  "description": "The Java Date and Time API provides classes like `LocalDate`, `LocalTime`, `LocalDateTime`, `Instant`, and others for handling dates and times. Before Java 8, `java.util.Date` and `java.util.Calendar` were commonly used, but they had several design issues. Java 8 introduced a new Date-Time API under the `java.time` package, which is more robust and user-friendly.\n\nExample:\n```java\nimport java.time.LocalDate;\nimport java.time.LocalDateTime;\npublic class DateExample {\n    public static void main(String[] args) {\n        LocalDate currentDate = LocalDate.now(); // Current date\n        LocalDateTime currentDateTime = LocalDateTime.now(); // Current date and time\n        System.out.println('Current Date: ' + currentDate);\n        System.out.println('Current Date and Time: ' + currentDateTime);\n    }\n}\n```\nThis example uses `LocalDate` and `LocalDateTime` to get the current date and current date-time, respectively."
+}
+,
+  {
+    "buttonId": "btnJavaArrayList",
+    "title": "Java ArrayList",
+    "description": "The `ArrayList` class in Java is a resizable array, which can be found in the `java.util` package. Unlike the standard array, it can grow and shrink in size dynamically. `ArrayList` is a part of the Java Collections Framework and provides methods for manipulating the size and contents of the list.\n\nExample:\n```java\nimport java.util.ArrayList;\npublic class ArrayListExample {\n    public static void main(String[] args) {\n        ArrayList<String> cars = new ArrayList<>();\n        cars.add('Volvo');\n        cars.add('BMW');\n        cars.add('Ford');\n        for (String car : cars) {\n            System.out.println(car);\n        }\n    }\n}\n```\nThis code creates an `ArrayList` of strings, adds a few elements to it, and then iterates through the list to print each element."
+  }
+,{
+  "buttonId": "btnJavaLinkedList",
+  "title": "Java LinkedList",
+  "description": "The `LinkedList` class in Java is a part of the Java Collections Framework and is used to create a linked list data structure. Unlike `ArrayList`, `LinkedList` is a doubly-linked list implementation that provides efficient insertions and deletions. It can be used as a list, stack, or queue.\n\nExample:\n```java\nimport java.util.LinkedList;\npublic class LinkedListExample {\n    public static void main(String[] args) {\n        LinkedList<String> animals = new LinkedList<>();\n        animals.add('Dog');\n        animals.add('Cat');\n        animals.addFirst('Horse');\n        for (String animal : animals) {\n            System.out.println(animal);\n        }\n    }\n}\n```\nThis example demonstrates creating a `LinkedList`, adding elements to it, and using the `addFirst` method to add an element to the beginning of the list."
+}
+,{
+  "buttonId": "btnJavaHashMap",
+  "title": "Java HashMap",
+  "description": "In Java, `HashMap` is part of the Java Collections Framework and is used to store key-value pairs. It implements the `Map` interface and is based on the hash table data structure. `HashMap` is useful for efficient storage and retrieval of data and allows one null key and multiple null values.\n\nExample:\n```java\nimport java.util.HashMap;\npublic class HashMapExample {\n    public static void main(String[] args) {\n        HashMap<String, Integer> userAges = new HashMap<>();\n        userAges.put('Alice', 28);\n        userAges.put('Bob', 25);\n        int age = userAges.get('Alice');\n        System.out.println('Age of Alice: ' + age);\n    }\n}\n```\nIn this example, a `HashMap` is created with `String` as the key and `Integer` as the value. The `put` method is used to add entries, and the `get` method retrieves the value associated with a key."
+}
+,
+  {
+    "buttonId": "btnJavaHashSet",
+    "title": "Java HashSet",
+    "description": "A HashSet in Java is a collection class used to create a collection that uses a hash table for storage. It inherits the AbstractSet class and implements the Set interface. HashSet stores its elements in a hash table, meaning it does not guarantee the order of elements and prohibits duplicates. It allows null value and is non-synchronized.\n\nExample:\n```java\nimport java.util.HashSet;\npublic class HashSetExample {\n    public static void main(String[] args) {\n        HashSet<String> cars = new HashSet<>();\n        cars.add('Volvo');\n        cars.add('BMW');\n        cars.add('Ford');\n        cars.add('BMW');  // Duplicate, will not be added\n        System.out.println(cars);\n    }\n}\n```\nIn this example, the HashSet `cars` stores car brands and ignores the duplicate 'BMW' entry."
+  }
+,{
+  "buttonId": "btnJavaIterator",
+  "title": "Java Iterator",
+  "description": "Iterator in Java is an interface that is used to iterate over a collection of elements (like arrays and lists). It is a part of the Java Collections Framework and provides methods to traverse a collection, access elements, and remove elements from the collection. Iterators are universal cursors for Collection API.\n\nExample:\n```java\nimport java.util.ArrayList;\nimport java.util.Iterator;\npublic class IteratorExample {\n    public static void main(String[] args) {\n        ArrayList<Integer> numbers = new ArrayList<>();\n        numbers.add(1);\n        numbers.add(2);\n        numbers.add(3);\n        Iterator<Integer> it = numbers.iterator();\n        while(it.hasNext()) {\n            Integer i = it.next();\n            System.out.println(i);\n        }\n    }\n}\n```\nIn this example, an `Iterator` is used to traverse the `ArrayList` `numbers` and print each element."
+}
+,{
+  "buttonId": "btnJavaWrapperClasses",
+  "title": "Java Wrapper Classes",
+  "description": "Wrapper classes in Java provide a way to use primitive data types (int, boolean, etc.) as objects. The eight primitive data types are represented by built-in object types, often used for wrapping a primitive value when an Object is needed. The wrapper classes in Java are `Integer`, `Float`, `Boolean`, `Char`, `Byte`, `Short`, `Long`, and `Double`.\n\nExample:\n```java\npublic class WrapperExample {\n    public static void main(String[] args) {\n        Integer myInt = 5;  // Autoboxing of int to Integer\n        int myPrimitiveInt = myInt;  // Unboxing of Integer to int\n        System.out.println(myInt);\n        System.out.println(myPrimitiveInt);\n    }\n}\n```\nThis code demonstrates the use of the `Integer` wrapper class to create an `Integer` object and then unbox it back to a primitive int."
+}
+,{
+  "buttonId": "btnJavaExceptions",
+  "title": "Java Exceptions",
+  "description": "Exceptions in Java are events that disrupt the normal flow of the program's instructions. They are objects that are thrown at runtime when an error occurs and can be caught and handled using `try-catch` blocks. Java provides a robust and object-oriented way to handle error conditions through exception handling.\n\nExample:\n```java\npublic class ExceptionExample {\n    public static void main(String[] args) {\n        try {\n            int[] numbers = {1, 2, 3};\n            System.out.println(numbers[10]); // This will cause an ArrayIndexOutOfBoundsException\n        } catch (Exception e) {\n            System.out.println('Something went wrong.');\n        }\n    }\n}\n```\nIn this example, accessing an invalid array index generates an exception, which is then caught and handled in the catch block."
+}
+,
+  {
+    "buttonId": "btnJavaRegEx",
+    "title": "Java RegEx",
+    "description": "Regular Expressions (RegEx) in Java are used for searching and manipulating strings. Java provides the `java.util.regex` package which consists of three classes: Pattern, Matcher, and PatternSyntaxException. The Pattern class represents a compiled regular expression, the Matcher class is used to perform match operations on a string, and PatternSyntaxException is an unchecked exception indicating a syntax error in a regular expression pattern.\n\nExample:\n```java\nimport java.util.regex.Matcher;\nimport java.util.regex.Pattern;\npublic class RegExExample {\n    public static void main(String[] args) {\n        Pattern pattern = Pattern.compile('hello', Pattern.CASE_INSENSITIVE);\n        Matcher matcher = pattern.matcher('Hello world');\n        boolean matchFound = matcher.find();\n        if(matchFound) {\n            System.out.println('Match found');\n        } else {\n            System.out.println('Match not found');\n        }\n    }\n}\n```\nThis code snippet uses RegEx to find the word 'hello' in a string, ignoring case sensitivity."
+  }
+,{
+  "buttonId": "btnJavaThreads",
+  "title": "Java Threads",
+  "description": "Threads in Java are the smallest unit of execution within a process. They allow a program to operate more efficiently by running multiple threads concurrently. Java provides two ways to create a thread: by extending the Thread class and by implementing the Runnable interface.\n\nExample (using Runnable):\n```java\npublic class HelloRunnable implements Runnable {\n    public void run() {\n        System.out.println('Hello from a thread!');\n    }\n\n    public static void main(String args[]) {\n        (new Thread(new HelloRunnable())).start();\n    }\n}\n```\nThis example shows how to create a basic thread that prints a message, using the Runnable interface."
+}
+,{
+  "buttonId": "btnJavaLambda",
+  "title": "Java Lambda",
+  "description": "Lambda expressions in Java are a feature introduced in Java 8 that provide a clear and concise way to represent one method interface using an expression. They are used primarily to define inline implementation of a functional interface. Lambda expressions bring benefits of functional programming into Java.\n\nExample:\n```java\nimport java.util.Arrays;\nimport java.util.List;\nimport java.util.function.Consumer;\n\npublic class LambdaExample {\n    public static void main(String[] args) {\n        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\n        Consumer<Integer> method = (n) -> { System.out.println(n); };\n        numbers.forEach( method );\n    }\n}\n```\nThis example demonstrates using a lambda expression to print each number in a list."
+}
+,{
+  "buttonId": "btnJavaFileHandling",
+  "title": "Java File Handling",
+  "description": "File handling in Java involves creating, reading, updating, and deleting files. Java provides several classes for handling files, such as `File`, `FileReader`, `FileWriter`, `BufferedReader`, and `BufferedWriter`, mainly found in the `java.io` package.\n\nExample (Reading a file):\n```java\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class FileReadExample {\n    public static void main(String[] args) {\n        try (BufferedReader br = new BufferedReader(new FileReader('file.txt'))) {\n            String line;\n            while ((line = br.readLine()) != null) {\n                System.out.println(line);\n            }\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\nThis code demonstrates reading a file line by line using `BufferedReader`."
+}
+,{
+  "buttonId": "btnJavaFiles",
+  "title": "Java Files",
+  "description": "The Java `Files` class, part of the NIO (New I/O) package introduced in Java 7, provides several static methods for operations on files and directories. It simplifies file operations, such as reading and writing to files, copying, moving, and deleting files. Unlike the `File` class, it provides better methods for file manipulation.\n\nExample (Copying a file):\n```java\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\nimport java.io.IOException;\n\npublic class FilesExample {\n    public static void main(String[] args) {\n        try {\n            Files.copy(Paths.get('source.txt'), Paths.get('destination.txt'));\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\nThis example demonstrates copying a file from one location to another using the `Files` class."
+}
+,{
+  "buttonId": "btnJavaCreateWriteFiles",
+  "title": "Java Create/Write Files",
+  "description": "Creating and writing to files in Java can be done using various classes, such as `FileWriter`, `BufferedWriter`, and the NIO `Files` class. These classes provide the functionality to create a file and write content to it.\n\nExample (using `BufferedWriter`):\n```java\nimport java.io.BufferedWriter;\nimport java.io.FileWriter;\nimport java.io.IOException;\n\npublic class CreateWriteFileExample {\n    public static void main(String[] args) {\n        try (BufferedWriter bw = new BufferedWriter(new FileWriter('newfile.txt'))) {\n            bw.write('Hello World!');\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\nThis code snippet creates a new file (or overwrites if it already exists) named 'newfile.txt' and writes 'Hello World!' to it."
+}
+,{
+  "buttonId": "btnJavaReadFiles",
+  "title": "Java Read Files",
+  "description": "Reading files in Java is a common operation that can be performed using classes like `FileReader`, `BufferedReader`, and the NIO `Files` class. These classes provide methods to efficiently read data from a file.\n\nExample (using `BufferedReader`):\n```java\nimport java.io.BufferedReader;\nimport java.io.FileReader;\nimport java.io.IOException;\n\npublic class ReadFileExample {\n    public static void main(String[] args) {\n        try (BufferedReader reader = new BufferedReader(new FileReader('example.txt'))) {\n            String line;\n            while ((line = reader.readLine()) != null) {\n                System.out.println(line);\n            }\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\nThis example demonstrates reading a file line by line using `BufferedReader`, a common approach for text files."
+}
+,
+  {
+    "buttonId": "btnJavaDeleteFiles",
+    "title": "Java Delete Files",
+    "description": "Deleting files in Java can be achieved using the `File` class from the `java.io` package or the `Files` class from the `java.nio.file` package. These classes provide methods to delete a file from the file system.\n\nExample (using `Files` class):\n```java\nimport java.nio.file.Files;\nimport java.nio.file.Paths;\nimport java.io.IOException;\n\npublic class DeleteFileExample {\n    public static void main(String[] args) {\n        try {\n            Files.delete(Paths.get('sample.txt'));\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}\n```\nThis code snippet demonstrates deleting a file named 'sample.txt' using the `Files` class."
+  }
+,{
+  "buttonId": "btnJavaAddTwoNumbers",
+  "title": "Add Two Numbers in Java",
+  "description": "Adding two numbers in Java is a fundamental operation. You can perform this operation in Java using simple arithmetic addition.\n\nExample:\n```java\npublic class AddTwoNumbers {\n    public static void main(String[] args) {\n        int num1 = 5;\n        int num2 = 7;\n        int sum = num1 + num2;\n        System.out.println('Sum: ' + sum);\n    }\n}\n```\nIn this example, two integers `num1` and `num2` are added together to calculate their sum, which is then printed to the console."
+}
+,{
+  "buttonId": "btnJavaAddTwoNumbers",
+  "title": "Add Two Numbers in Java",
+  "description": "Adding two numbers in Java is a fundamental operation. You can perform this operation in Java using simple arithmetic addition.\n\nExample:\n```java\npublic class AddTwoNumbers {\n    public static void main(String[] args) {\n        int num1 = 5;\n        int num2 = 7;\n        int sum = num1 + num2;\n        System.out.println('Sum: ' + sum);\n    }\n}\n```\nIn this example, two integers `num1` and `num2` are added together to calculate their sum, which is then printed to the console."
+}
+,{
+  "buttonId": "btnJavaCountWords",
+  "title": "Count Words in a String in Java",
+  "description": "Counting words in a string is a common task in Java. You can split the string into words based on spaces and then count the resulting words.\n\nExample:\n```java\npublic class CountWordsInString {\n    public static void main(String[] args) {\n        String text = 'This is an example sentence.';\n        String[] words = text.split(' ');\n        int wordCount = words.length;\n        System.out.println('Word Count: ' + wordCount);\n    }\n}\n```\nIn this example, the string `text` is split into words using the space character as the delimiter, and the number of words is counted and printed to the console."
+}
+,{
+  "buttonId": "btnJavaReverseString",
+  "title": "Reverse a String in Java",
+  "description": "Reversing a string in Java involves iterating through the characters of the string and constructing a reversed string. You can achieve this using a loop or the `StringBuilder` class.\n\nExample using a loop:\n```java\npublic class ReverseString {\n    public static void main(String[] args) {\n        String original = 'Hello, World!';\n        String reversed = '';\n        for (int i = original.length() - 1; i >= 0; i--) {\n            reversed += original.charAt(i);\n        }\n        System.out.println('Reversed String: ' + reversed);\n    }\n}\n```\nIn this example, the original string is reversed character by character, resulting in the reversed string."
+}
+,{
+  "buttonId": "btnJavaSumArrayElements",
+  "title": "Sum of Array Elements in Java",
+  "description": "To calculate the sum of elements in an array in Java, you can use a loop to iterate through the array and add each element to a sum variable.\n\nExample:\n```java\npublic class SumArrayElements {\n    public static void main(String[] args) {\n        int[] numbers = {1, 2, 3, 4, 5};\n        int sum = 0;\n        for (int num : numbers) {\n            sum += num;\n        }\n        System.out.println('Sum of Array Elements: ' + sum);\n    }\n}\n```\nIn this example, the elements of the `numbers` array are summed up to calculate the total sum."
+}
+,{
+  "buttonId": "btnJavaAreaRectangle",
+  "title": "Area of Rectangle in Java",
+  "description": "To calculate the area of a rectangle in Java, you can multiply its length and width. You can use variables to store the length and width values and perform the multiplication.\n\nExample:\n```java\npublic class AreaOfRectangle {\n    public static void main(String[] args) {\n        double length = 5.0;\n        double width = 3.0;\n        double area = length * width;\n        System.out.println('Area of Rectangle: ' + area);\n    }\n}\n```\nIn this example, the area of a rectangle with a given length and width is calculated and printed."
+}
+,{
+  "buttonId": "btnJavaEvenOdd",
+  "title": "Check if a Number is Even or Odd in Java",
+  "description": "Determining whether a number is even or odd in Java is done using the modulo operator (%). If a number is divisible by 2 with no remainder, it's even; otherwise, it's odd.\n\nExample:\n```java\npublic class EvenOddCheck {\n    public static void main(String[] args) {\n        int number = 7;\n        if (number % 2 == 0) {\n            System.out.println(number + ' is even.');\n        } else {\n            System.out.println(number + ' is odd.');\n        }\n    }\n}\n```\nIn this example, the program checks whether the number is even or odd and prints the result."
+}
+,{
+  "buttonId": "btnJavaReference",
+  "title": "Java Reference",
+  "description": "In Java, a reference refers to a variable that holds the memory address of an object. Unlike primitive data types that store values directly, objects are stored in memory, and references point to the memory location of those objects. References allow you to work with objects in Java, including creating, manipulating, and passing them between methods.\n\nExample:\n```java\npublic class ReferenceExample {\n    public static void main(String[] args) {\n        String text = 'Hello, Java!';\n        String reference = text; // reference now points to the same string object\n        System.out.println(reference); // Prints 'Hello, Java!'\n    }\n}\n```\nIn this example, `text` and `reference` both refer to the same `String` object in memory."
+}
+,{
+  "buttonId": "btnJavaKeywords",
+  "title": "Java Keywords",
+  "description": "Java keywords are reserved words with specific meanings in the Java programming language. They cannot be used as identifiers (variable names, class names, etc.) and have predefined roles in the language. Some common Java keywords include `public`, `class`, `if`, `else`, `while`, `return`, and many more. Keywords are an integral part of Java's syntax and play essential roles in defining program structure and behavior."
+}
+,{
+  "buttonId": "btnJavaStringMethods",
+  "title": "Java String Methods",
+  "description": "Java provides a wide range of methods to manipulate and work with strings. These methods are available through the `String` class, and they allow you to perform operations like concatenation, substring extraction, character replacement, case conversion, and more on strings.\n\nExample:\n```java\npublic class StringMethodsExample {\n    public static void main(String[] args) {\n        String text = 'Hello, Java!';\n        int length = text.length(); // Get the length of the string\n        String upperCase = text.toUpperCase(); // Convert to uppercase\n        String replaced = text.replace('J', 'L'); // Replace 'J' with 'L'\n        System.out.println('Length: ' + length);\n        System.out.println('Uppercase: ' + upperCase);\n        System.out.println('Replaced: ' + replaced);\n    }\n}\n```\nIn this example, various `String` methods are used to manipulate a string."
+}
+,{
+  "buttonId": "btnJavaMathMethods",
+  "title": "Java Math Methods",
+  "description": "Java's `java.lang.Math` class provides a set of mathematical functions and constants that allow you to perform common mathematical operations. These methods include functions for trigonometry, logarithms, exponentiation, rounding, and more. The `Math` class is useful for performing complex mathematical calculations in Java programs.\n\nExample:\n```java\npublic class MathMethodsExample {\n    public static void main(String[] args) {\n        double number = 4.5;\n        double squareRoot = Math.sqrt(number); // Calculate square root\n        double sineValue = Math.sin(Math.PI / 4); // Calculate sine\n        double roundedValue = Math.round(3.7); // Round to the nearest integer\n        System.out.println('Square Root: ' + squareRoot);\n        System.out.println('Sine Value: ' + sineValue);\n        System.out.println('Rounded Value: ' + roundedValue);\n    }\n}\n```\nIn this example, various mathematical calculations are performed using `Math` methods."
+}
+,{
+  "buttonId": "btnJavaExamples",
+  "title": "Java Examples",
+  "description": "Java examples are code snippets or complete programs that demonstrate how to perform specific tasks or solve problems using the Java programming language. These examples serve as practical learning resources for programmers to understand Java concepts, syntax, and best practices. They cover a wide range of topics, from basic to advanced, and can help learners grasp Java programming through hands-on practice."
+}
+,{
+  "buttonId": "btnJavaCompiler",
+  "title": "Java Compiler",
+  "description": "A Java compiler is a software tool that translates human-readable Java source code into machine-readable bytecode. The bytecode can be executed on the Java Virtual Machine (JVM). Java compilers play a crucial role in the development process, as they ensure that Java code is converted into a format that can run on any platform with a compatible JVM. Popular Java compilers include `javac` (command-line) and integrated development environments (IDEs) like Eclipse and IntelliJ IDEA."
+}
+,{
+  "buttonId": "btnJavaExercises",
+  "title": "Java Exercises",
+  "description": "Java exercises are coding challenges or practice problems designed to improve programming skills and reinforce Java concepts. These exercises often require learners to write Java code to solve specific problems or implement algorithms. They can cover various topics, including data structures, algorithms, object-oriented programming, and more. Java exercises are a valuable resource for honing programming skills and gaining confidence in Java development."
+}
+,{
+  "buttonId": "btnJavaQuiz",
+  "title": "Java Quiz",
+  "description": "A Java quiz is a set of questions and multiple-choice answers that test a person's knowledge of Java programming concepts, syntax, and best practices. Java quizzes are used for self-assessment and as learning tools to reinforce understanding. They cover topics such as variables, data types, control structures, object-oriented programming, and more. Taking Java quizzes can be a fun and effective way to gauge your Java knowledge."
+}
+,{
+  "buttonId": "btnJavaServer",
+  "title": "Java Server",
+  "description": "In the context of Java programming, a Java server typically refers to a server-side application or service written in Java. Java is widely used for developing server-side components, web applications, and enterprise-level server software. Java servers can handle tasks such as processing client requests, managing databases, and serving web pages. Popular Java server technologies include Java EE (Enterprise Edition), Spring, and Apache Tomcat."
+}
+,{
+  "buttonId": "btnJavaCertificate",
+  "title": "Java Certificate",
+  "description": "A Java certificate, in the context of education and certification, refers to a formal recognition of a person's proficiency in Java programming. Java certificates are awarded to individuals who have successfully completed Java training programs, courses, or certification exams. Earning a Java certificate can enhance your career prospects, demonstrate your expertise to employers, and validate your skills in Java development. Certifications like Oracle Certified Java Programmer (OCP) are well-regarded in the industry."
+}
+
+]

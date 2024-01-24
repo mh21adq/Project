@@ -9,4 +9,6 @@
     <item name="resultText" type="id" />
     <item name="codeEditor" type="id" />
     <item name="problemDescription" type="id" />
+    <item name="listViewLearningMaterials" type="id" />
+    <item name="listViewLearning" type="id" />
 </resources>

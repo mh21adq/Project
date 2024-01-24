@@ -1,0 +1,13 @@
+[
+  {
+    "buttonId": "btnJavaIntro",
+    "title": "Java Introduction",
+    "description": "Java is a high-level programming language developed by Sun Microsystems."
+  },
+  {
+    "buttonId": "btnJavaSyntax",
+    "title": "Java Syntax",
+    "description": "Java syntax is largely influenced by C++."
+  }
+
+]

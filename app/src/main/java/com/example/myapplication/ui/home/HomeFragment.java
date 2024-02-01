@@ -179,5 +179,4 @@ public class HomeFragment extends Fragment {
         topicToButtonIdMap.put("Java Server", "btnJavaServer");
         topicToButtonIdMap.put("Java Certificate", "btnJavaCertificate");
     }
-
 }

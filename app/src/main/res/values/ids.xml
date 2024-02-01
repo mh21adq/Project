@@ -11,4 +11,5 @@
     <item name="problemDescription" type="id" />
     <item name="listViewLearningMaterials" type="id" />
     <item name="listViewLearning" type="id" />
+    <item name="idTVBot" type="id" />
 </resources>

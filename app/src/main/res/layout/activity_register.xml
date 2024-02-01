@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Create your account"
         android:textSize="24sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/light_blue_A400"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"/>
 
@@ -79,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Already have an account? Sign In"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/light_blue_A200"
         android:background="@android:color/transparent"
         android:layout_below="@id/buttonRegister"
         android:layout_centerHorizontal="true"

@@ -22,8 +22,7 @@ public class ChatActivity extends AppCompatActivity {
     private static final String TAG = "ChatActivity";
     private EditText userMessageEditText;
     private TextView responseTextView;
-    private final String apiKey = "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"; // Replace with your actual API key
-
+    private final String apiKey = "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"; 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

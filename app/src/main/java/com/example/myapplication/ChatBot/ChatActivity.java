@@ -1,12 +1,13 @@
-package com.example.myapplication;
+package com.example.myapplication.ChatBot;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +23,7 @@ public class ChatActivity extends AppCompatActivity {
     private static final String TAG = "ChatActivity";
     private EditText userMessageEditText;
     private TextView responseTextView;
-    private final String apiKey = "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"; 
+    private final String apiKey = "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";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

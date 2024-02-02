@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ChatBot;
 
 import java.util.List;
 

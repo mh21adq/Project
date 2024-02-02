@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.ChatBot;
 
 public class ChatMessage {
     private String message;

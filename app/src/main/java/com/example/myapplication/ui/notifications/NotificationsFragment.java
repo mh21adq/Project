@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
-import com.example.myapplication.ChatActivity;
+import com.example.myapplication.ChatBot.ChatActivity;
 
 public class NotificationsFragment extends Fragment {
 

@@ -1,10 +1,12 @@
-package com.example.myapplication;
+package com.example.myapplication.authentication;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication.R;
 import com.google.firebase.auth.FirebaseAuth;
 import android.widget.*;
 import android.widget.Toast;
